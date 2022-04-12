@@ -1,0 +1,281 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+:root {
+  --clr-blue-200: 225 100% 94%;
+  --clr-blue-300: 245 83% 68%;
+  --clr-blue-400: 245 75% 52%;
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-200: 225 100% 98%;
+  --clr-neutral-400: 224 23% 55%;
+  --clr-neutral-800: 223 47% 23%;
+
+  --ff-sans: "Red Hat Display", sans-serif;
+
+  --fs-100: 0.8125rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 0.9375rem;
+  --fs-700: 1.375rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+
+@media (min-width: 45em) {
+  :root {
+    --fs-100: 0.875rem;
+    --fs-400: 1rem;
+    --fs-700: 1.75rem;
+  }
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.625;
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-500);
+  color: hsl(var(--clr-neutral-400));
+  background-color: hsl(var(--clr-blue-200));
+  margin-inline: 1.5rem;
+  background-image: url(/assets/pattern-background-mobile.svg);
+  background-repeat: repeat no-repeat;
+}
+
+@media (min-width: 35em) {
+  body {
+    background-image: url(/assets/pattern-background-desktop.svg);
+  }
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1,
+h2 {
+  line-height: 1.33;
+}
+/* ------------------- */
+/* Composition         */
+/* ------------------- */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+/* ------------------- */
+/* Utility             */
+/* ------------------- */
+.bg-neutral-100 {
+  background-color: hsl(var(--clr-neutral-100));
+}
+.bg-neutral-200 {
+  background-color: hsl(var(--clr-neutral-200));
+}
+
+.text-neutral-800 {
+  color: hsl(var(--clr-neutral-800));
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fw-900 {
+  font-weight: var(--fw-900);
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+.my-16 {
+  margin-block: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-start {
+  text-align: start;
+}
+.text-center {
+  text-align: center;
+}
+
+/* ------------------- */
+/* Block               */
+/* ------------------- */
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-900);
+  line-height: 1.33;
+}
+
+.button[data-type="primary"] {
+  color: hsl(var(--clr-neutral-100));
+  background-color: hsl(var(--clr-blue-400));
+  border-radius: 0.625rem;
+  box-shadow: 0px 20px 20px 0px hsl(var(--clr-blue-400) / 0.19);
+  padding: 1em 2em;
+}
+
+.button[data-type="primary"]:hover,
+.button[data-type="primary"]:focus {
+  background-color: hsl(var(--clr-blue-300));
+}
+
+.button[data-type="naked"] {
+  color: hsl(var(--clr-neutral-400));
+}
+
+.button[data-type="naked"]:hover,
+.button[data-type="naked"]:focus {
+  color: hsl(var(--clr-neutral-800));
+}
+
+.link {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: var(--fs-100);
+  font-weight: var(--fw-700);
+  color: hsl(var(--clr-blue-400));
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 2px;
+}
+
+.link:hover,
+.link:focus {
+  color: hsl(var(--clr-blue-300));
+  text-decoration: none;
+}
+
+.card {
+  width: min(100%, 28.125rem);
+  border-radius: 1.25rem;
+  box-shadow: 0px 40px 40px -20px hsl(228 87% 39% / 0.15);
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.card-content {
+  padding: 2rem 1.5rem;
+  --gap: 1.25rem;
+}
+
+.card-content > p {
+  margin-inline: 0.5rem;
+  margin-top: 1rem;
+}
+
+.card-content > .plan {
+  align-items: center;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+}
+
+.card-content > button {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 35em) {
+  .card-content {
+    padding: 3rem;
+  }
+
+  .card-content > p {
+    margin-inline: 0;
+  }
+
+  .card-content > .plan {
+    padding: 1.5rem;
+    font-size: var(--fs-400);
+    margin-top: 1.25rem;
+  }
+
+  .card-content > button {
+    margin-top: 2rem;
+  }
+}
