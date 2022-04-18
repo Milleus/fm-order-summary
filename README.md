@@ -35,7 +35,7 @@ Mobile view
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/order-summary-component-Byw38H749](https://www.frontendmentor.io/solutions/order-summary-component-Byw38H749)
-- Live Site URL: [https://order-summary.davequah.com/](https://order-summary.davequah.com/)
+- Live Site URL: [https://Milleus.github.io/fm-order-summary/](https://Milleus.github.io/fm-order-summary/)
 
 ## My process
 
