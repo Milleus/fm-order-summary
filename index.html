@@ -26,42 +26,41 @@
 </head>
 
 <body>
-  <header class="text-neutral-800 text-center my-16">
-    <h1>Order summary card</h1>
-  </header>
+  <div class="container grid">
+    <main>
+      <h1 class="sr-only">Order summary card</h1>
+      <div class="card bg-neutral-100 text-center">
+        <img src="/assets/illustration-hero.svg" alt="someone listening to music">
 
-  <main>
-    <div class="card bg-neutral-100 text-center">
-      <img src="/assets/illustration-hero.svg" alt="someone listening to music">
+        <div class="card-content">
+          <h2 class="fs-700 fw-900 text-neutral-800">Order Summary</h2>
+          <p>You can now listen to millions of songs, audiobooks, and podcasts on any
+            device anywhere you like!</p>
+          <div class="plan flex bg-neutral-200 text-start">
+            <div>
+              <img src="/assets/icon-music.svg" alt="">
+            </div>
+            <div>
+              <p class="fw-900 text-neutral-800">Annual Plan</p>
+              <p>$59.99/year</p>
+            </div>
+            <button class="link ml-auto">Change</button>
+          </div>
 
-      <div class="card-content">
-        <h2 class="fs-700 fw-900 text-neutral-800">Order Summary</h2>
-        <p>You can now listen to millions of songs, audiobooks, and podcasts on any
-          device anywhere you like!</p>
-        <div class="plan flex bg-neutral-200 text-start">
-          <div>
-            <img src="/assets/icon-music.svg" alt="">
-          </div>
-          <div>
-            <p class="fw-900 text-neutral-800">Annual Plan</p>
-            <p>$59.99/year</p>
-          </div>
-          <button class="link ml-auto">Change</button>
+          <button class="button w-full" data-type="primary">Proceed to Payment</button>
+          <button class="button" data-type="naked">Cancel Order</button>
         </div>
-
-        <button class="button w-full" data-type="primary">Proceed to Payment</button>
-        <button class="button" data-type="naked">Cancel Order</button>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="text-neutral-800 text-center my-16">
-    <p>
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
-        Mentor</a>.
-      Coded by <a href="https://www.frontendmentor.io/profile/Milleus">Dave Quah (@Milleus)</a>.
-    </p>
-  </footer>
+    <footer>
+      <p class="text-neutral-800 text-center">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+          Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/Milleus">Dave Quah (@Milleus)</a>.
+      </p>
+    </footer>
+  </div>
 </body>
 
 </html>
